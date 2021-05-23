@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import COLORS from "../styles/colors";
 
-type RestProps = {
+type ResetProps = {
   onClick: () => void;
 }
 
-export default function Reset({onClick}: RestProps) {
+export default function Reset({onClick}: ResetProps) {
   return (
     <ResetWrapper>
       <ButtonWrapper onClick={onClick}>Reset Session</ButtonWrapper>
