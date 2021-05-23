@@ -17,4 +17,14 @@ const ButtonWrapper = styled.button`
     padding: 6px 12px;
     margin: 1px;
     width: 33%;
+
+    &:hover {
+      background-color: ${COLORS.primaryDark};
+      color: ${COLORS.white}
+    }
+
+    &:active {
+      border-color: ${COLORS.secondary};
+      background-color: ${COLORS.primary}
+    }
 `;

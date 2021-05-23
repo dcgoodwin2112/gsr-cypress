@@ -22,7 +22,7 @@ const ButtonWrapper = styled.button`
   margin: 0 auto;
   background-color: ${COLORS.secondary};
   color: ${COLORS.white};
-  border: 3px solid lightgray;
+  border: 2px solid ${COLORS.white};
   border-radius: 16px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -30,5 +30,10 @@ const ButtonWrapper = styled.button`
 
   &:hover {
     border-color: ${COLORS.primaryLight};
+  }
+
+  &:active {
+    background-color: ${COLORS.grayDark};
+    border-color: ${COLORS.secondary};
   }
 `;

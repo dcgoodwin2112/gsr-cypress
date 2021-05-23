@@ -1,6 +1,4 @@
 import Layout from "./Layout";
-import GlobalStyles from "../styles/GlobalStyles";
-import Banner from "./Banner";
 import GameInfoContainer from "./GameInfoContainer";
 import GameInfoItem from "./GameInfoItem";
 import PlayerContainer from "./PlayerContainer";
@@ -19,8 +17,6 @@ function App() {
   const [state, rock, paper, scissors, reset] = useGameReducer();
   return (
     <Layout>
-      <GlobalStyles />
-      <Banner />
       <main>
         <GameInfoContainer>
           <GameInfoItem amount={state.win}> win</GameInfoItem>
