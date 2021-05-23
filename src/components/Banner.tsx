@@ -5,17 +5,23 @@ import BREAKPOINTS from '../styles/breakpoints'
 export default function Header() {
   return (
     <HeaderWrapper>
-      <LogoWrapper>Rock Paper Scissors</LogoWrapper>
+      <LogoWrapper>
+        <h1>Rock Paper Scissors</h1>
+      </LogoWrapper>
     </HeaderWrapper>
   );
 }
 
 const LogoWrapper = styled.div`
   margin: 0 auto;
-  padding: 8px 12px;
-  letter-spacing: .2rem;
-  color: ${COLORS.white};
-  font-size: 1.6rem;
+
+  & h1 {
+    color: ${COLORS.white};
+    padding: 8px 12px;
+    letter-spacing: .2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
 `
 
 const HeaderWrapper = styled.header`
