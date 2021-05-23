@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 type ButtonLabelGroupProps = {
-  children: React.ReactChild | Array<React.ReactChild>;
+  children: React.ReactNode | Array<React.ReactNode>;
 }
 
 export default function ButtonLabelGroup({children}: ButtonLabelGroupProps) {
