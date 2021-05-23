@@ -17,7 +17,6 @@ function App() {
   const [state, rock, paper, scissors, reset] = useGameReducer();
   return (
     <Layout>
-      <main>
         <GameInfoContainer>
           <GameInfoItem amount={state.win}> win</GameInfoItem>
           <GameInfoItem amount={state.lose}> lose</GameInfoItem>
@@ -56,7 +55,6 @@ function App() {
           result={state.result}
         />
         <Reset onClick={() => reset()} />
-      </main>
     </Layout>
   );
 }

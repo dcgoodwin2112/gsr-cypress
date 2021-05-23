@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
     <LayoutWrapper className="App">
       <GlobalStyles />
       <Banner />
-      {children}
+      <main>{children}</main>
       <Footer />
     </LayoutWrapper>
   );
