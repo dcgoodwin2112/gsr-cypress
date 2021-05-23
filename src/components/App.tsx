@@ -17,44 +17,42 @@ function App() {
   const [state, rock, paper, scissors, reset] = useGameReducer();
   return (
     <Layout>
-        <GameInfoContainer>
-          <GameInfoItem amount={state.win}> win</GameInfoItem>
-          <GameInfoItem amount={state.lose}> lose</GameInfoItem>
-          <GameInfoItem amount={state.draw}> draw</GameInfoItem>
-        </GameInfoContainer>
-        <PlayerContainer>
-          <Player>
-            <ActionImage action={state.player}>Ready Player 1</ActionImage>
-            <ButtonLabelGroup>
-              <ActionButton onClick={() => rock()}>Rock</ActionButton>
-              <ActionButton onClick={() => paper()}>Paper</ActionButton>
-              <ActionButton onClick={() => scissors()}>Scissors</ActionButton>
-            </ButtonLabelGroup>
-          </Player>
-          <ActionResult result={state.result} />
-          <Player>
-            <ActionImage action={state.cpu}>Ready CPU</ActionImage>
-            <ButtonLabelGroup>
-              <ActionLabel active={state.cpu === ACTIONS.ROCK ? true : false}>
-                Rock
-              </ActionLabel>
-              <ActionLabel active={state.cpu === ACTIONS.PAPER ? true : false}>
-                Paper
-              </ActionLabel>
-              <ActionLabel
-                active={state.cpu === ACTIONS.SCISSORS ? true : false}
-              >
-                Scissors
-              </ActionLabel>
-            </ButtonLabelGroup>
-          </Player>
-        </PlayerContainer>
-        <GameStatusContainer
-          player={state.player}
-          cpu={state.cpu}
-          result={state.result}
-        />
-        <Reset onClick={() => reset()} />
+      <GameInfoContainer>
+        <GameInfoItem amount={state.win}> win</GameInfoItem>
+        <GameInfoItem amount={state.lose}> lose</GameInfoItem>
+        <GameInfoItem amount={state.draw}> draw</GameInfoItem>
+      </GameInfoContainer>
+      <PlayerContainer>
+        <Player>
+          <ActionImage action={state.player}>Ready Player 1</ActionImage>
+          <ButtonLabelGroup>
+            <ActionButton onClick={() => rock()}>Rock</ActionButton>
+            <ActionButton onClick={() => paper()}>Paper</ActionButton>
+            <ActionButton onClick={() => scissors()}>Scissors</ActionButton>
+          </ButtonLabelGroup>
+        </Player>
+        <ActionResult result={state.result} />
+        <Player>
+          <ActionImage action={state.cpu}>Ready CPU</ActionImage>
+          <ButtonLabelGroup>
+            <ActionLabel active={state.cpu === ACTIONS.ROCK ? true : false}>
+              Rock
+            </ActionLabel>
+            <ActionLabel active={state.cpu === ACTIONS.PAPER ? true : false}>
+              Paper
+            </ActionLabel>
+            <ActionLabel active={state.cpu === ACTIONS.SCISSORS ? true : false}>
+              Scissors
+            </ActionLabel>
+          </ButtonLabelGroup>
+        </Player>
+      </PlayerContainer>
+      <GameStatusContainer
+        player={state.player}
+        cpu={state.cpu}
+        result={state.result}
+      />
+      <Reset onClick={() => reset()} />
     </Layout>
   );
 }
