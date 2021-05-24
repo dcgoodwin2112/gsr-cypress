@@ -2,13 +2,13 @@ import styled from "styled-components";
 import COLORS from "../styles/colors";
 
 type ResetProps = {
-  onClick: () => void;
+  clickHandler: () => void;
 }
 
-export default function Reset({onClick}: ResetProps) {
+export default function Reset({clickHandler}: ResetProps) {
   return (
     <ResetWrapper>
-      <ButtonWrapper onClick={onClick}>Reset Session</ButtonWrapper>
+      <ButtonWrapper onClick={clickHandler}>Reset Session</ButtonWrapper>
     </ResetWrapper>
   );
 }

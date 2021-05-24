@@ -26,9 +26,9 @@ function App() {
         <Player>
           <ActionImage action={state.player}>Ready Player 1</ActionImage>
           <ButtonLabelGroup>
-            <ActionButton onClick={() => rock()}>Rock</ActionButton>
-            <ActionButton onClick={() => paper()}>Paper</ActionButton>
-            <ActionButton onClick={() => scissors()}>Scissors</ActionButton>
+            <ActionButton clickHandler={rock}>Rock</ActionButton>
+            <ActionButton clickHandler={paper}>Paper</ActionButton>
+            <ActionButton clickHandler={scissors}>Scissors</ActionButton>
           </ButtonLabelGroup>
         </Player>
         <ActionResult result={state.result} />
@@ -52,7 +52,7 @@ function App() {
         cpu={state.cpu}
         result={state.result}
       />
-      <Reset onClick={() => reset()} />
+      <Reset clickHandler={reset} />
     </Layout>
   );
 }

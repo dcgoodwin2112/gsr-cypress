@@ -3,11 +3,11 @@ import COLORS from "../styles/colors";
 
 type ActionButtonProps = {
   children: React.ReactNode;
-  onClick: () => void;
+  clickHandler: () => void;
 };
 
-export default function ActionButton({ children, onClick }: ActionButtonProps) {
-  return <ButtonWrapper onClick={onClick}>{children}</ButtonWrapper>;
+export default function ActionButton({ children, clickHandler }: ActionButtonProps) {
+  return <ButtonWrapper onClick={clickHandler}>{children}</ButtonWrapper>;
 }
 
 const ButtonWrapper = styled.button`
