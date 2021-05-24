@@ -60,4 +60,6 @@ it("Render useGameReducer Hook", () => {
   ).toBe(0);
   expect(state.result).toBe(RESULTS.INIT);
   expect(state.cpu).toBe(ACTIONS.RESET);
+
+  expect(true).toBe(false)
 });
