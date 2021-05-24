@@ -30,7 +30,7 @@ export function isWinner(playerAction: ACTIONS, cpuAction: ACTIONS) {
 
 export function getCPUAction() {
   // Random number between 1 and 3
-  return Math.floor(Math.random() * 2) + 1;
+  return Math.floor(Math.random() * 3) + 1;
 }
 
 export function getActionLabel(action: ACTIONS) {
