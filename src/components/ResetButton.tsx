@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import COLORS from "../styles/colors";
 
-type ResetProps = {
+type ResetButtonProps = {
+  children: React.ReactNode;
   clickHandler: () => void;
 }
 
-export default function Reset({clickHandler}: ResetProps) {
+export default function ResetButton({children, clickHandler}: ResetButtonProps) {
   return (
     <ResetWrapper>
-      <ButtonWrapper onClick={clickHandler}>Reset Session</ButtonWrapper>
+      <ButtonWrapper onClick={clickHandler} name="reset">{children}</ButtonWrapper>
     </ResetWrapper>
   );
 }

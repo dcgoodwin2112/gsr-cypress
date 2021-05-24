@@ -5,7 +5,7 @@ type PlayerContainerProps = {
   children: React.ReactNode;
 };
 
-export default function PlayerContainer({ children }: PlayerContainerProps) {
+export default function PlayersContainer({ children }: PlayerContainerProps) {
   return <ContainerWrapper>{children}</ContainerWrapper>;
 }
 

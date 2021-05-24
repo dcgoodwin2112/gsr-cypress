@@ -1,14 +1,14 @@
 import Layout from "./Layout";
 import GameInfoContainer from "./GameInfoContainer";
 import GameInfoItem from "./GameInfoItem";
-import PlayerContainer from "./PlayerContainer";
+import PlayersContainer from "./PlayersContainer";
 import Player from "./Player";
 import ButtonLabelGroup from "./ButtonLabelGroup";
 import ActionButton from "./ActionButton";
 import ActionResult from "./ActionResult";
 import ActionLabel from "./ActionLabel";
 import GameStatusContainer from "./GameStatusContainer";
-import Reset from "./Reset";
+import ResetButton from "./ResetButton";
 import useGameReducer from "../hooks/useGameReducer";
 import ActionImage from "./ActionImage";
 import { ACTIONS } from "../lib/game";
@@ -22,13 +22,19 @@ function App() {
         <GameInfoItem amount={state.lose}> lose</GameInfoItem>
         <GameInfoItem amount={state.draw}> draw</GameInfoItem>
       </GameInfoContainer>
-      <PlayerContainer>
+      <PlayersContainer>
         <Player>
           <ActionImage action={state.player}>Ready Player 1</ActionImage>
           <ButtonLabelGroup>
-            <ActionButton clickHandler={rock}>Rock</ActionButton>
-            <ActionButton clickHandler={paper}>Paper</ActionButton>
-            <ActionButton clickHandler={scissors}>Scissors</ActionButton>
+            <ActionButton clickHandler={rock} name="rock">
+              Rock
+            </ActionButton>
+            <ActionButton clickHandler={paper} name="paper">
+              Paper
+            </ActionButton>
+            <ActionButton clickHandler={scissors} name="scissors">
+              Scissors
+            </ActionButton>
           </ButtonLabelGroup>
         </Player>
         <ActionResult result={state.result} />
@@ -46,13 +52,13 @@ function App() {
             </ActionLabel>
           </ButtonLabelGroup>
         </Player>
-      </PlayerContainer>
+      </PlayersContainer>
       <GameStatusContainer
         player={state.player}
         cpu={state.cpu}
         result={state.result}
       />
-      <Reset clickHandler={reset} />
+      <ResetButton clickHandler={reset}>Reset Session</ResetButton>
     </Layout>
   );
 }
