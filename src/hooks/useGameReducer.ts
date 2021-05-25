@@ -19,20 +19,14 @@ function reducer(state: typeof initialState, action: ACTIONS) {
   } else if (ACTIONS[action] !== typeof "undefined") {
     const cpuAction = getCPUAction();
     const result = isWinner(action, cpuAction);
-    const win = result === RESULTS.WIN ? state.win + 1 : state.win;
-    const lose = result === RESULTS.LOSE ? state.lose + 1 : state.lose;
-    const draw = result === RESULTS.DRAW ? state.draw + 1 : state.draw;
-    const rock = action === ACTIONS.ROCK ? state.rock + 1 : state.rock;
-    const paper = action === ACTIONS.PAPER ? state.paper + 1 : state.paper;
-    const scissors =
-      action === ACTIONS.SCISSORS ? state.scissors + 1 : state.scissors;
     return {
-      win,
-      lose,
-      draw,
-      rock,
-      paper,
-      scissors,
+      win: result === RESULTS.WIN ? state.win + 1 : state.win,
+      lose: result === RESULTS.LOSE ? state.lose + 1 : state.lose,
+      draw: result === RESULTS.DRAW ? state.draw + 1 : state.draw,
+      rock: action === ACTIONS.ROCK ? state.rock + 1 : state.rock,
+      paper: action === ACTIONS.PAPER ? state.paper + 1 : state.paper,
+      scissors:
+        action === ACTIONS.SCISSORS ? state.scissors + 1 : state.scissors,
       result,
       player: action,
       cpu: cpuAction,
