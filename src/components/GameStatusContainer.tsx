@@ -47,7 +47,7 @@ export default function GameStatusContainer({
   const cpuMessage = getPlayerMessage(cpu, "cpu");
 
   return (
-    <GameStatusWrapper aria-live="polite">
+    <GameStatusWrapper role="alert">
       <p>{resultMessage}</p>
       <p>{playerMessage} {cpuMessage}</p>
     </GameStatusWrapper>
