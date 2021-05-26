@@ -1,12 +1,9 @@
 import styled from "styled-components"
 import COLORS from "../styles/colors"
 import BREAKPOINTS from "../styles/breakpoints"
+import type { WithChildrenProps } from "../types";
 
-type PlayerProps = {
-  children: React.ReactNode;
-};
-
-export default function Player({ children }: PlayerProps) {
+export default function Player({ children }: WithChildrenProps) {
   return <PlayerWrapper>{children}</PlayerWrapper>;
 }
 

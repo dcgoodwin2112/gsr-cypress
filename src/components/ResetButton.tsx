@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import COLORS from "../styles/colors";
+import { ButtonProps } from "../types";
 
-type ResetButtonProps = {
-  children: React.ReactNode;
-  clickHandler: () => void;
-}
-
-export default function ResetButton({children, clickHandler}: ResetButtonProps) {
+export default function ResetButton({children, clickHandler}: ButtonProps) {
   return (
     <ResetWrapper>
       <ButtonWrapper onClick={clickHandler} name="reset">{children}</ButtonWrapper>

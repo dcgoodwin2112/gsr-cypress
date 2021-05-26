@@ -1,11 +1,8 @@
 import styled from "styled-components";
 import BREAKPOINTS from "../styles/breakpoints";
+import { WithChildrenProps } from "../types";
 
-type PlayerContainerProps = {
-  children: React.ReactNode;
-};
-
-export default function PlayersContainer({ children }: PlayerContainerProps) {
+export default function PlayersContainer({ children }: WithChildrenProps) {
   return <ContainerWrapper>{children}</ContainerWrapper>;
 }
 

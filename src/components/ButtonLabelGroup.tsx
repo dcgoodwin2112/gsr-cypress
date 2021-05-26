@@ -1,11 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import type { WithChildrenProps } from "../types"
 
-type ButtonLabelGroupProps = {
-  children: React.ReactNode | Array<React.ReactNode>;
-}
-
-export default function ButtonLabelGroup({children}: ButtonLabelGroupProps) {
+export default function ButtonLabelGroup({children}: WithChildrenProps) {
   return(<Wrapper>{children}</Wrapper>)
 }
 

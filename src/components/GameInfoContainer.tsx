@@ -1,12 +1,9 @@
 import styled from "styled-components";
 import COLORS from "../styles/colors";
 import BREAKPOINTS from "../styles/breakpoints";
+import { WithChildrenProps } from "../types";
 
-type GameInfoWrapperProps = {
-  children: React.ReactNode;
-};
-
-export default function GameInfoContainer({ children }: GameInfoWrapperProps) {
+export default function GameInfoContainer({ children }: WithChildrenProps) {
   return <GameInfoWrapper>{children}</GameInfoWrapper>;
 }
 

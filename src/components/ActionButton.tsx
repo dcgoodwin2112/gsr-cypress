@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import COLORS from "../styles/colors";
+import { ButtonProps } from "../types";
 
-type ActionButtonProps = {
-  children: React.ReactNode;
+interface ActionButtonProps extends ButtonProps{
   name: string;
-  clickHandler: () => void;
 };
 
 export default function ActionButton({ children, clickHandler, name }: ActionButtonProps) {
