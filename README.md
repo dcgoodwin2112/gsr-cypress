@@ -1,47 +1,69 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0de103f1-2cf1-4c53-9904-97f0967f7714/deploy-status)](https://app.netlify.com/sites/romantic-poincare-d83675/deploys)
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rock Paper Scissors
 
-## Available Scripts
+This is a browser game created with React.
 
-In the project directory, you can run:
+## Design Process
 
-### `yarn start`
+## Research
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I began this project by evaluating other rock paper scissors games and making a list of common features. These included:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Single Player
+2. Local Multi-player
+3. Networked Multi-player
+4. Session stats (win, lose, draw)
+5. Session Reset
+6. Game and turn history
+7. Adaptive CPU (Moves are predictive instead of random)
+8. Leader board
 
-### `yarn test`
+I then narrowed the list down to subset of core features that could be built and tested in a limited amount of time. These included:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Single Player
+2. Session Stats (win, lose, draw)
+3. Session Reset
 
-### `yarn build`
+## Wireframes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Next, I made a list of all of the information that should be visible to the user and created a wireframe sketch.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This document also contain notes on accessibility concerns including tab order and alert regions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![App wireframe image](https://github.com/dcgoodwin2112/rock-paper-scissors/blob/main/public/wireframe.jpg?raw=true)
 
-### `yarn eject`
+## Technology Choices
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+After deciding on included features and basic layout, I then selected the tools I would use to build the app. These Included:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Create React App With Typescript (An Ideal React Starter for Single Page App)
+2. Styled Components (CSS in JS Styling Package)
+3. React Testing Library
+4. React Hooks Testing Library
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Code Organization
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This app is separated into three logical components.
 
-## Learn More
+1. Game Logic: This is a flat function file that only handles game logic and does not depend on React
+2. Game State Hook: Custom react hook for managing the state of the application.
+3. Game UI: All of the UI React components in the src/components directory
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This code organization what choose specifically for maintainability. New features can have their logic implemented and tested outside of the UI and most components can be easily removed because they do not control state or logic.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Testing
+
+The game logic file, custom hook, and ui components all have test files located in adjacent __tests__ directories.
+
+All components are rendered insolation to verify they don't throw errors and buttons are tested with mock click functions.
+
+The entire App component is rendered and user interactions are simulated to verify game state responds to user input correctly.
+
+## CI/CD
+
+This site is deployed on Netlify. Any push to the main branch of the project will trigger a built and deployment. All tests are run before the build step which will cancel the deployment if any test fails.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0de103f1-2cf1-4c53-9904-97f0967f7714/deploy-status)](https://app.netlify.com/sites/romantic-poincare-d83675/deploys)
+
+
