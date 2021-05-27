@@ -54,7 +54,7 @@ This code organization what chosen specifically for maintainability. New feature
 
 ## Testing
 
-The game logic file, custom hook, and ui components all have test files located in adjacent __tests__ directories.
+The game logic file, custom hook, and ui components all have test files located in adjacent **tests** directories.
 
 All components are rendered insolation to verify they don't throw errors and buttons are tested with mock click functions.
 
@@ -65,5 +65,3 @@ The entire App component is rendered and user interactions are simulated to veri
 This site is deployed on Netlify. Any push to the main branch of the project will trigger a build and deployment. All tests are run before the build step which will cancel the deployment if any test fails.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0de103f1-2cf1-4c53-9904-97f0967f7714/deploy-status)](https://app.netlify.com/sites/rps-dcgoodwin-dev/deploys)
-
-
