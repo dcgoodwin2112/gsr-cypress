@@ -50,7 +50,7 @@ This app is separated into three logical components.
 2. Game State Hook: Custom react hook for managing the state of the application.
 3. Game UI: All of the UI React components in the src/components directory
 
-This code organization what choose specifically for maintainability. New features can have their logic implemented and tested outside of the UI and most components can be easily removed because they do not control state or logic.
+This code organization what chosen specifically for maintainability. New features can have their logic implemented and tested outside of the UI and most components can be easily removed because they do not control state or logic.
 
 ## Testing
 
