@@ -37,7 +37,7 @@ This document also contain notes on accessibility concerns including tab order a
 
 After deciding on included features and basic layout, I then selected the tools I would use to build the app. These Included:
 
-1. Create React App With Typescript (An Ideal React Starter for Single Page App)
+1. Create React App With Typescript (An Ideal React Starter for a Single Page App)
 2. Styled Components (CSS in JS Styling Package)
 3. React Testing Library
 4. React Hooks Testing Library
