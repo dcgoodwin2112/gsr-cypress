@@ -56,6 +56,7 @@ export default function GameStatusContainer({
 
 const GameStatusWrapper = styled.div`
   color: ${COLORS.white};
+  background-color: ${COLORS.grayDark};
   font-size: 1.2rem;
   max-width: 700px;
   margin: 36px auto;

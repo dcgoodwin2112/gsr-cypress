@@ -17,7 +17,11 @@ export const PlayerWrapper = styled.div`
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
   border-radius: 16px;
 
+  @media screen and (max-width: ${BREAKPOINTS.lg}px) {
+    margin: 54px 16px;
+  }
+
   @media screen and (max-width: ${BREAKPOINTS.md}px) {
     margin: 16px 36px;
   }
-`;
+`
