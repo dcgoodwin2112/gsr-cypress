@@ -4,11 +4,11 @@ import COLORS from "../styles/colors";
 export default function Footer() {
   return (
     <FooterWrapper>
-      <LinkWrapper href="https://github.com/dcgoodwin2112/rock-paper-scissors">
+      <LinkWrapper href="https://github.com/dcgoodwin2112/gsr-cypress">
         View on GitHub
       </LinkWrapper>
     </FooterWrapper>
-  );
+  )
 }
 
 const FooterWrapper = styled.footer`
