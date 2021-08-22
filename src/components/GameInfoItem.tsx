@@ -8,7 +8,7 @@ type GameInfoItemProps = {
 export default function GameInfoItem({ children, amount }: GameInfoItemProps) {
   return (
     <InfoWrapper>
-      <AmountWrapper>{amount}</AmountWrapper> {children}
+      <AmountWrapper data-cy={children}>{amount}</AmountWrapper> {children}
     </InfoWrapper>
   );
 }

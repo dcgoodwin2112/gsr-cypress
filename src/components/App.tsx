@@ -18,9 +18,9 @@ function App() {
   return (
     <Layout>
       <GameInfoContainer>
-        <GameInfoItem amount={state.win}> win</GameInfoItem>
-        <GameInfoItem amount={state.lose}> lose</GameInfoItem>
-        <GameInfoItem amount={state.draw}> draw</GameInfoItem>
+        <GameInfoItem amount={state.win}>win</GameInfoItem>
+        <GameInfoItem amount={state.lose}>lose</GameInfoItem>
+        <GameInfoItem amount={state.draw}>draw</GameInfoItem>
       </GameInfoContainer>
       <PlayersContainer>
         <Player>

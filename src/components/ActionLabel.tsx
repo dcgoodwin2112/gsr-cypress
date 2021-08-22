@@ -1,16 +1,18 @@
-import styled from "styled-components";
+import styled from "styled-components"
 import COLORS from "../styles/colors"
 
 type ActionLabelProps = {
-  children: React.ReactNode;
-  active?: boolean;
-};
+  children: React.ReactNode
+  active?: boolean
+}
 
 export default function ActionLabel({ children, active }: ActionLabelProps) {
   if (active === true) {
-    return <ActiveLabelWrapper>{children}</ActiveLabelWrapper>;
+    return (
+      <ActiveLabelWrapper data-cy="active-label">{children}</ActiveLabelWrapper>
+    )
   } else {
-    return <LabelWrapper>{children}</LabelWrapper>;
+    return <LabelWrapper>{children}</LabelWrapper>
   }
 }
 
@@ -19,9 +21,9 @@ const LabelWrapper = styled.span`
   padding-top: 6px;
   font-size: 1.2rem;
   font-weight: 600;
-  color: ${COLORS.primaryDark}
-`;
+  color: ${COLORS.primaryDark};
+`
 
 const ActiveLabelWrapper = styled(LabelWrapper)`
   color: ${COLORS.secondary};
-`;
+`

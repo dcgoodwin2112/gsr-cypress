@@ -5,7 +5,7 @@ import { ButtonProps } from "../types";
 export default function ResetButton({children, clickHandler}: ButtonProps) {
   return (
     <ResetWrapper>
-      <ButtonWrapper onClick={clickHandler} name="reset">{children}</ButtonWrapper>
+      <ButtonWrapper onClick={clickHandler} name="reset" data-cy="reset">{children}</ButtonWrapper>
     </ResetWrapper>
   );
 }

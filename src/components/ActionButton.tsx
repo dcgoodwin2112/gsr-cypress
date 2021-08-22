@@ -7,7 +7,7 @@ interface ActionButtonProps extends ButtonProps{
 };
 
 export default function ActionButton({ children, clickHandler, name }: ActionButtonProps) {
-  return <ButtonWrapper onClick={clickHandler} name={name}>{children}</ButtonWrapper>;
+  return <ButtonWrapper onClick={clickHandler} name={name} data-cy={name}>{children}</ButtonWrapper>;
 }
 
 const ButtonWrapper = styled.button`

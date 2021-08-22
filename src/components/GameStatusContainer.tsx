@@ -47,7 +47,7 @@ export default function GameStatusContainer({
   const cpuMessage = getPlayerMessage(cpu, "cpu");
 
   return (
-    <GameStatusWrapper role="alert">
+    <GameStatusWrapper role="alert" data-cy="game-status">
       <p>{resultMessage}</p>
       <p>{playerMessage} {cpuMessage}</p>
     </GameStatusWrapper>

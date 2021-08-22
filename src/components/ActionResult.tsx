@@ -8,7 +8,7 @@ type ActionResultProps = {
 
 export default function ActionResult({ result }: ActionResultProps) {
   return (
-    <ActionWrapper>
+    <ActionWrapper data-cy="action-result">
       {result === RESULTS.INIT
         ? "Ready!"
         : result === RESULTS.LOSE
