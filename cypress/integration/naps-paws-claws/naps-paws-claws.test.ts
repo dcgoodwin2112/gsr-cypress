@@ -3,7 +3,7 @@
 describe("Testing Naps Paws Claws game", () => {
 //   beforeEach(() => {
 //     cy.visit("/")
-//     cy.get("[data-cy=win]").invoke("text").then(parseInt).as("win")
+//     cy.get("[data-cy=win]").invoke("tssext").then(parseInt).as("win")
 //     cy.get("[data-cy=lose]").invoke("text").then(parseInt).as("lose")
 //     cy.get("[data-cy=draw]").invoke("text").then(parseInt).as("draw")
 //   })
