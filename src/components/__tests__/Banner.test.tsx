@@ -3,5 +3,5 @@ import Banner from "../Banner";
 
 it("Render Banner", () => {
   render(<Banner />)
-  expect(screen.getByText(/Rock Paper Scissors/i)).toBeInTheDocument();
+  expect(screen.getByText(/Good Cat/i)).toBeInTheDocument();
 })

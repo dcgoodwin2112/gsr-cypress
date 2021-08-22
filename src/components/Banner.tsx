@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <LogoWrapper>
-        <h1>Rock Paper Scissors</h1>
+        <h1>Good cat, Sad cat, Rad cat</h1>
       </LogoWrapper>
     </HeaderWrapper>
   );

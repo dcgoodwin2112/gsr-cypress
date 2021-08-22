@@ -6,6 +6,6 @@ it("Render ActionImage", () => {
   render(<ActionImage action={ACTIONS.RESET}>Placeholder</ActionImage>);
   expect(screen.getByText(/Placeholder/i)).toBeInTheDocument();
 
-  render(<ActionImage action={ACTIONS.ROCK}>Placeholder</ActionImage>);
+  render(<ActionImage action={ACTIONS.GOOD}>Placeholder</ActionImage>);
   expect(screen.getByAltText(/Image of Rocks/i)).toBeInTheDocument()
 });

@@ -18,5 +18,5 @@ export default function Layout({ children }: WithChildrenProps) {
 
 const LayoutWrapper = styled.div`
   min-height: 100vh;
-  background-color: ${COLORS.grayDark};
-`;
+  background: url("/tuna_left_side.png") ${COLORS.grayDark} bottom left no-repeat;
+`

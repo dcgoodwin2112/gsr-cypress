@@ -14,7 +14,7 @@ const ButtonWrapper = styled.button`
     border: 1px solid ${COLORS.primaryLight};
     background-color: ${COLORS.white};
     font-weight: 600;
-    padding: 6px 12px;
+    padding: 6px 6px;
     margin: 1px;
     width: 33%;
 

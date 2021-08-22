@@ -10,12 +10,12 @@ type ActionImageProps = {
 export default function ActionImage({ children, action }: ActionImageProps) {
   return (
     <Wrapper>
-      {action === ACTIONS.ROCK ? (
-        <ImageWrapper src="/rock.jpg" alt="Image of Rocks"/>
-      ) : action === ACTIONS.PAPER ? (
-        <ImageWrapper src="/paper.jpg" alt="Image of Paper" />
-      ) : action === ACTIONS.SCISSORS ? (
-        <ImageWrapper src="/scissors.jpg" alt="Image of Scissors" />
+      {action === ACTIONS.GOOD ? (
+        <ImageWrapper src="/good_cat.png" alt="Image of Rocks"/>
+      ) : action === ACTIONS.SAD ? (
+        <ImageWrapper src="/sad_cat.png" alt="Image of Paper" />
+      ) : action === ACTIONS.RAD ? (
+        <ImageWrapper src="/rad_cat.png" alt="Image of Scissors" />
       ) : (
         <PlaceholderWrapper>{children}</PlaceholderWrapper>
       )}
@@ -26,7 +26,10 @@ export default function ActionImage({ children, action }: ActionImageProps) {
 const Wrapper = styled.div`
   height: 260px;
   overflow: hidden;
-`;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 const ImageWrapper = styled.img`
   position: relative;

@@ -1,8 +1,8 @@
 export enum ACTIONS {
   RESET,
-  ROCK,
-  PAPER,
-  SCISSORS,
+  GOOD,
+  SAD,
+  RAD,
 }
 
 export enum RESULTS {
@@ -13,9 +13,9 @@ export enum RESULTS {
 }
 
 const BEATS = new Map();
-BEATS.set(ACTIONS.ROCK, ACTIONS.SCISSORS);
-BEATS.set(ACTIONS.PAPER, ACTIONS.ROCK);
-BEATS.set(ACTIONS.SCISSORS, ACTIONS.PAPER);
+BEATS.set(ACTIONS.GOOD, ACTIONS.RAD);
+BEATS.set(ACTIONS.SAD, ACTIONS.GOOD);
+BEATS.set(ACTIONS.RAD, ACTIONS.SAD);
 
 export function isWinner(playerAction: ACTIONS, cpuAction: ACTIONS) {
   const actionBeats = BEATS.get(playerAction);

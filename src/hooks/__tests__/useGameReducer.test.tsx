@@ -5,7 +5,7 @@ import { ACTIONS, RESULTS } from "../../lib/game";
 it("Render useGameReducer Hook", () => {
   const { result } = renderHook(() => useGameReducer());
   let {
-    current: [state, rock, paper, scissors, reset],
+    current: [state, good, sad, rad, reset],
   } = result;
 
   // Assert Hook state is expected initial state
@@ -13,28 +13,28 @@ it("Render useGameReducer Hook", () => {
     state.win +
       state.lose +
       state.draw +
-      state.rock +
-      state.paper +
-      state.scissors
+      state.good +
+      state.sad +
+      state.rad
   ).toBe(0);
   expect(state.result).toBe(RESULTS.INIT);
   expect(state.cpu).toBe(ACTIONS.RESET);
 
   // Dispatch Actions
   act(() => {
-    rock();
-    paper();
-    scissors();
+    good();
+    sad();
+    rad();
   });
 
   // Destructure values out of rendered hook again
   ({
-    current: [state, rock, paper, scissors, reset],
+    current: [state, good, sad, rad, reset],
   } = result);
 
   // Assert total actions === 3 and ACTIONS and RESULTS are valid
   expect(state.win + state.lose + state.draw).toBe(3);
-  expect(state.rock + state.paper + state.scissors).toBe(3);
+  expect(state.good + state.sad + state.rad).toBe(3);
   expect(ACTIONS[state.player]).not.toBeUndefined();
   expect(ACTIONS[state.cpu]).not.toBeUndefined();
   expect(RESULTS[state.result]).not.toBeUndefined();
@@ -46,7 +46,7 @@ it("Render useGameReducer Hook", () => {
 
   // Destructure values out of rendered hook again
   ({
-    current: [state, rock, paper, scissors, reset],
+    current: [state, good, sad, rad, reset],
   } = result);
 
   // Assert Hook state is expected initial state again
@@ -54,9 +54,9 @@ it("Render useGameReducer Hook", () => {
     state.win +
       state.lose +
       state.draw +
-      state.rock +
-      state.paper +
-      state.scissors
+      state.good +
+      state.sad +
+      state.rad
   ).toBe(0);
   expect(state.result).toBe(RESULTS.INIT);
   expect(state.cpu).toBe(ACTIONS.RESET);

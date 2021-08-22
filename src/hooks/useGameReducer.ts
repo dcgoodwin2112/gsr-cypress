@@ -5,9 +5,9 @@ const initialState = {
   win: 0,
   lose: 0,
   draw: 0,
-  rock: 0,
-  paper: 0,
-  scissors: 0,
+  good: 0,
+  sad: 0,
+  rad: 0,
   result: RESULTS.INIT,
   player: ACTIONS.RESET,
   cpu: ACTIONS.RESET,
@@ -23,10 +23,10 @@ function reducer(state: typeof initialState, action: ACTIONS) {
       win: result === RESULTS.WIN ? state.win + 1 : state.win,
       lose: result === RESULTS.LOSE ? state.lose + 1 : state.lose,
       draw: result === RESULTS.DRAW ? state.draw + 1 : state.draw,
-      rock: action === ACTIONS.ROCK ? state.rock + 1 : state.rock,
-      paper: action === ACTIONS.PAPER ? state.paper + 1 : state.paper,
-      scissors:
-        action === ACTIONS.SCISSORS ? state.scissors + 1 : state.scissors,
+      good: action === ACTIONS.GOOD ? state.good + 1 : state.good,
+      sad: action === ACTIONS.SAD ? state.sad + 1 : state.sad,
+      rad:
+        action === ACTIONS.RAD ? state.rad + 1 : state.rad,
       result,
       player: action,
       cpu: cpuAction,
@@ -39,21 +39,21 @@ function reducer(state: typeof initialState, action: ACTIONS) {
 export default function useGameReducer() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const rock = () => {
-    dispatch(ACTIONS.ROCK);
+  const good = () => {
+    dispatch(ACTIONS.GOOD);
   };
 
-  const paper = () => {
-    dispatch(ACTIONS.PAPER);
+  const sad = () => {
+    dispatch(ACTIONS.SAD);
   };
 
-  const scissors = () => {
-    dispatch(ACTIONS.SCISSORS);
+  const rad = () => {
+    dispatch(ACTIONS.RAD);
   };
 
   const reset = () => {
     dispatch(ACTIONS.RESET);
   };
 
-  return [state, rock, paper, scissors, reset] as const;
+  return [state, good, sad, rad, reset] as const;
 }

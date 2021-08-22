@@ -14,7 +14,7 @@ import ActionImage from "./ActionImage";
 import { ACTIONS } from "../lib/game";
 
 function App() {
-  const [state, rock, paper, scissors, reset] = useGameReducer();
+  const [state, good, sad, rad, reset] = useGameReducer();
   return (
     <Layout>
       <GameInfoContainer>
@@ -24,31 +24,31 @@ function App() {
       </GameInfoContainer>
       <PlayersContainer>
         <Player>
-          <ActionImage action={state.player}>Ready Player 1</ActionImage>
+          <ActionImage action={state.player}>Ready Kitty 1</ActionImage>
           <ButtonLabelGroup>
-            <ActionButton clickHandler={rock} name="rock">
-              Rock
+            <ActionButton clickHandler={good} name="good">
+              Good Cat
             </ActionButton>
-            <ActionButton clickHandler={paper} name="paper">
-              Paper
+            <ActionButton clickHandler={sad} name="sad">
+              Sad Cat
             </ActionButton>
-            <ActionButton clickHandler={scissors} name="scissors">
-              Scissors
+            <ActionButton clickHandler={rad} name="rad">
+              Rad Cat
             </ActionButton>
           </ButtonLabelGroup>
         </Player>
         <ActionResult result={state.result} />
         <Player>
-          <ActionImage action={state.cpu}>Ready CPU</ActionImage>
+          <ActionImage action={state.cpu}>Ready Cat-puter</ActionImage>
           <ButtonLabelGroup>
-            <ActionLabel active={state.cpu === ACTIONS.ROCK ? true : false}>
-              Rock
+            <ActionLabel active={state.cpu === ACTIONS.GOOD ? true : false}>
+              Good Cat
             </ActionLabel>
-            <ActionLabel active={state.cpu === ACTIONS.PAPER ? true : false}>
-              Paper
+            <ActionLabel active={state.cpu === ACTIONS.SAD ? true : false}>
+              Sad Cat
             </ActionLabel>
-            <ActionLabel active={state.cpu === ACTIONS.SCISSORS ? true : false}>
-              Scissors
+            <ActionLabel active={state.cpu === ACTIONS.RAD ? true : false}>
+              Rad Cat
             </ActionLabel>
           </ButtonLabelGroup>
         </Player>
