@@ -24,7 +24,7 @@ function App() {
       </GameInfoContainer>
       <PlayersContainer>
         <Player>
-          <ActionImage action={state.player}>Ready Kitty 1</ActionImage>
+          <ActionImage player="p1" action={state.player}>Ready Kitty 1</ActionImage>
           <ButtonLabelGroup>
             <ActionButton clickHandler={good} name="good">
               Good Cat
@@ -39,7 +39,7 @@ function App() {
         </Player>
         <ActionResult result={state.result} />
         <Player>
-          <ActionImage action={state.cpu}>Ready Cat-puter</ActionImage>
+          <ActionImage player="cpu" action={state.cpu}>Ready Cat-puter</ActionImage>
           <ButtonLabelGroup>
             <ActionLabel active={state.cpu === ACTIONS.GOOD ? true : false}>
               Good Cat

@@ -15,7 +15,7 @@ function getResultMessage(result: RESULTS) {
     case RESULTS.INIT:
       return "Click a Cat button to begin.";
     case RESULTS.LOSE:
-      return "Catputer Wins! Kitty 1 has been defeated.";
+      return "Catputer wins! Kitty 1 has been defeated.";
     case RESULTS.DRAW:
       return "This match is a Draw!";
     case RESULTS.WIN:
